@@ -2,79 +2,336 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test Apps</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Space for trial run" />
+    <meta name="author" content="Arun Warrier" />
+    <title>Trial Run</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
 
-<body>
-    <header>
-        <h1 class="text-center mt-5">Capture barcode data</h1>
-    </header>
-    <main>
-        <div class="container">
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-4">
-                    <h4 for="input-name" class="mb-3 mt-5">Instructions</h4>
-                    <p>Download the <a
-                            href="https://github.com/oxcafedead/barcode-reader-emulator/releases/download/2.0.0-alpha/barcode-emulator.exe">Barcode
-                            Simulator</a> > Install > click on the input box > press the hotkey "Ctrl + Alt + A"
-                        </br></p>
-                </div>
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><svg version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                        <path fill="#FFFFFF" opacity="1.000000" stroke="none" d="
+                                    M513.000000,242.000000 
+                                    	C513.000000,332.299103 513.000000,422.598175 513.000000,512.948608 
+                                    	C342.432251,512.948608 171.864487,512.948608 1.000000,512.948608 
+                                    	C1.000000,392.311493 1.000000,271.622711 1.323992,150.593506 
+                                    	C4.504433,157.189911 9.809774,160.055527 17.166395,160.030930 
+                                    	C41.806767,159.948517 66.447586,160.006668 91.088234,159.996231 
+                                    	C101.087761,159.992004 106.994965,154.278900 107.000168,144.657150 
+                                    	C107.005470,134.843979 101.009712,129.005432 90.892113,129.002518 
+                                    	C67.416901,128.995743 43.937016,129.269150 20.468897,128.861130 
+                                    	C11.732498,128.709259 5.099880,131.016174 1.000000,139.000000 
+                                    	C1.000000,93.022804 1.000000,47.045601 1.000000,1.034201 
+                                    	C171.559265,1.034201 342.118530,1.034201 513.000000,1.034201 
+                                    	C513.000000,76.021706 513.000000,151.043869 512.660522,226.381409 
+                                    	C509.109863,212.591400 495.932617,203.967926 482.226562,203.987717 
+                                    	C453.947113,204.028549 425.667542,204.000000 397.388031,204.000000 
+                                    	C395.647247,204.000000 393.906433,204.000000 392.000000,204.000000 
+                                    	C392.000000,182.906326 392.022552,162.616699 391.963379,142.327301 
+                                    	C391.957764,140.403732 391.503387,138.469864 391.149139,136.560852 
+                                    	C389.374664,126.998360 382.868958,121.356819 374.800720,116.648994 
+                                    	C373.941650,115.788460 373.109131,115.293762 372.314850,114.743828 
+                                    	C342.043579,93.784286 311.659271,72.984848 281.571198,51.765430 
+                                    	C271.148193,44.414673 251.908524,46.059700 242.717728,55.513157 
+                                    	C216.253647,82.733543 189.261856,109.445084 162.241898,136.117996 
+                                    	C155.107544,143.160721 151.466064,151.010468 151.928741,161.086639 
+                                    	C152.509598,173.736450 158.698334,182.349518 169.957275,187.409607 
+                                    	C181.059357,192.399216 194.573441,189.920059 202.715851,181.781296 
+                                    	C223.327042,161.179382 243.990585,140.629135 264.475403,119.902260 
+                                    	C267.174622,117.171127 269.041260,116.620834 272.255493,118.984695 
+                                    	C286.046448,129.127121 299.994110,139.056549 313.813782,149.384857 
+                                    	C286.236237,177.229813 258.721497,204.745499 231.230362,232.284744 
+                                    	C226.426208,237.097305 221.721268,242.008926 216.716141,246.975418 
+                                    	C216.271820,247.377884 216.081863,247.679733 215.931488,247.974411 
+                                    	C215.971085,247.967239 215.944168,247.891403 215.638641,248.032501 
+                                    	C152.561523,310.943573 89.828377,373.752075 26.963127,436.428101 
+                                    	C20.146086,443.224579 16.910425,450.805817 16.835232,460.502777 
+                                    	C16.745232,472.109131 24.734756,483.386627 35.282089,487.700470 
+                                    	C47.659401,492.762756 61.118870,488.453674 68.051842,481.508850 
+                                    	C124.650551,424.813446 181.318558,368.187195 237.973526,311.547974 
+                                    	C239.259872,310.261963 240.640884,309.070679 242.286987,307.981476 
+                                    	C258.019501,323.559052 273.442780,338.990295 289.004883,354.560455 
+                                    	C261.666504,381.877136 234.534531,409.181183 207.143768,436.223175 
+                                    	C200.125549,443.152069 196.852905,450.904297 196.841049,460.803131 
+                                    	C196.827621,472.003021 204.627121,483.365814 215.202713,487.649109 
+                                    	C226.346603,492.162567 239.699051,489.794739 247.682266,481.813171 
+                                    	C282.918945,446.583984 317.937714,411.132629 353.511993,376.247772 
+                                    	C364.464569,365.507355 364.556702,343.370239 353.432404,332.668091 
+                                    	C330.269135,310.383942 307.830505,287.346527 285.814545,265.338867 
+                                    	C301.326141,249.829300 316.687500,234.469894 332.000000,219.159393 
+                                    	C332.000000,224.308746 332.144623,229.923752 331.972626,235.529037 
+                                    	C331.478271,251.638351 345.177826,264.825287 361.412537,264.920929 
+                                    	C402.072601,265.160370 442.735443,265.096863 483.396118,264.916138 
+                                    	C491.279999,264.881104 498.859192,262.532318 504.073120,256.220520 
+                                    	C507.607483,251.941895 510.062378,246.771545 513.000000,242.000000 
+                                    M463.268524,32.060505 
+                                    	C451.824768,24.756756 439.431671,22.148565 426.204956,25.427896 
+                                    	C402.269928,31.362154 388.240540,52.740387 392.307648,77.472389 
+                                    	C395.861420,99.082642 412.878967,114.166779 435.968323,114.904167 
+                                    	C451.230774,115.391609 463.974213,109.165665 473.209930,97.089302 
+                                    	C482.218445,85.309975 484.094604,71.749496 480.721954,57.381435 
+                                    	C478.264984,46.914383 471.544647,39.370720 463.268524,32.060505 
+                                    M53.526978,189.000000 
+                                    	C51.361374,189.000000 49.195759,188.996490 47.030163,189.000610 
+                                    	C36.939445,189.019791 31.008083,194.659515 31.000004,204.239929 
+                                    	C30.991488,214.336014 36.723019,219.993134 47.009769,219.996994 
+                                    	C71.664490,220.006241 96.319206,220.005844 120.973923,219.997147 
+                                    	C131.060043,219.993591 136.992035,214.336777 137.000000,204.755981 
+                                    	C137.008392,194.663330 131.274368,189.007385 120.986130,189.002945 
+                                    	C98.830200,188.993378 76.674271,189.000000 53.526978,189.000000 
+                                    M136.960892,88.823753 
+                                    	C137.147766,73.565369 132.688126,69.000450 117.595276,69.000488 
+                                    	C94.139618,69.000542 70.683968,68.996605 47.228310,69.002174 
+                                    	C36.906010,69.004631 30.999628,74.655998 30.999788,84.504288 
+                                    	C30.999949,94.349220 36.907440,99.995514 47.236885,99.997849 
+                                    	C71.357948,100.003296 95.480469,99.849091 119.599266,100.083084 
+                                    	C127.778496,100.162453 133.565155,97.263092 136.960892,88.823753 
+                                    z" />
+                        <path fill="#3389FF" opacity="1.000000" stroke="none" d="
+                                    M513.000000,241.533890 
+                                    	C510.062378,246.771545 507.607483,251.941895 504.073120,256.220520 
+                                    	C498.859192,262.532318 491.279999,264.881104 483.396118,264.916138 
+                                    	C442.735443,265.096863 402.072601,265.160370 361.412537,264.920929 
+                                    	C345.177826,264.825287 331.478271,251.638351 331.972626,235.529037 
+                                    	C332.144623,229.923752 332.000000,224.308746 332.000000,219.159393 
+                                    	C316.687500,234.469894 301.326141,249.829300 285.814545,265.338867 
+                                    	C307.830505,287.346527 330.269135,310.383942 353.432404,332.668091 
+                                    	C364.556702,343.370239 364.464569,365.507355 353.511993,376.247772 
+                                    	C317.937714,411.132629 282.918945,446.583984 247.682266,481.813171 
+                                    	C239.699051,489.794739 226.346603,492.162567 215.202713,487.649109 
+                                    	C204.627121,483.365814 196.827621,472.003021 196.841049,460.803131 
+                                    	C196.852905,450.904297 200.125549,443.152069 207.143768,436.223175 
+                                    	C234.534531,409.181183 261.666504,381.877136 289.004883,354.560455 
+                                    	C273.442780,338.990295 258.019501,323.559052 242.249954,307.648865 
+                                    	C234.540787,299.555298 227.192780,291.926178 219.810989,284.329895 
+                                    	C211.813110,276.099609 209.645554,263.356476 214.424698,253.033371 
+                                    	C215.167542,251.428802 215.449234,249.610748 215.944183,247.891403 
+                                    	C215.944168,247.891403 215.971085,247.967239 216.180145,247.866165 
+                                    	C216.582993,247.468323 216.776749,247.171570 216.970520,246.874817 
+                                    	C221.721268,242.008926 226.426208,237.097305 231.230362,232.284744 
+                                    	C258.721497,204.745499 286.236237,177.229813 314.164551,149.335876 
+                                    	C316.005859,147.853806 317.551025,146.868866 318.824677,145.609375 
+                                    	C326.527435,137.992218 334.129822,130.273453 341.843231,122.667191 
+                                    	C346.896301,117.684273 352.936493,114.649246 360.155365,115.071510 
+                                    	C365.072510,115.359123 369.949951,116.325951 374.845123,116.989075 
+                                    	C382.868958,121.356819 389.374664,126.998360 391.149139,136.560852 
+                                    	C391.503387,138.469864 391.957764,140.403732 391.963379,142.327301 
+                                    	C392.022552,162.616699 392.000000,182.906326 392.000000,204.000000 
+                                    	C393.906433,204.000000 395.647247,204.000000 397.388031,204.000000 
+                                    	C425.667542,204.000000 453.947113,204.028549 482.226562,203.987717 
+                                    	C495.932617,203.967926 509.109863,212.591400 512.660522,226.848389 
+                                    	C513.000000,231.689255 513.000000,236.378510 513.000000,241.533890 
+                                    z" />
+                        <path fill="#19CFFC" opacity="1.000000" stroke="none" d="
+                                    M1.000000,139.458069 
+                                    	C5.099880,131.016174 11.732498,128.709259 20.468897,128.861130 
+                                    	C43.937016,129.269150 67.416901,128.995743 90.892113,129.002518 
+                                    	C101.009712,129.005432 107.005470,134.843979 107.000168,144.657150 
+                                    	C106.994965,154.278900 101.087761,159.992004 91.088234,159.996231 
+                                    	C66.447586,160.006668 41.806767,159.948517 17.166395,160.030930 
+                                    	C9.809774,160.055527 4.504433,157.189911 1.323992,150.126526 
+                                    	C1.000000,146.638718 1.000000,143.277420 1.000000,139.458069 
+                                    z" />
+                        <path fill="#2864F0" opacity="1.000000" stroke="none" d="
+                                    M215.638641,248.032501 
+                                    	C215.449234,249.610748 215.167542,251.428802 214.424698,253.033371 
+                                    	C209.645554,263.356476 211.813110,276.099609 219.810989,284.329895 
+                                    	C227.192780,291.926178 234.540787,299.555298 241.940704,307.502563 
+                                    	C240.640884,309.070679 239.259872,310.261963 237.973526,311.547974 
+                                    	C181.318558,368.187195 124.650551,424.813446 68.051842,481.508850 
+                                    	C61.118870,488.453674 47.659401,492.762756 35.282089,487.700470 
+                                    	C24.734756,483.386627 16.745232,472.109131 16.835232,460.502777 
+                                    	C16.910425,450.805817 20.146086,443.224579 26.963127,436.428101 
+                                    	C89.828377,373.752075 152.561523,310.943573 215.638641,248.032501 
+                                    z" />
+                        <path fill="#2864F0" opacity="1.000000" stroke="none" d="
+                                    M374.800720,116.649002 
+                                    	C369.949951,116.325951 365.072510,115.359123 360.155365,115.071510 
+                                    	C352.936493,114.649246 346.896301,117.684273 341.843231,122.667191 
+                                    	C334.129822,130.273453 326.527435,137.992218 318.824677,145.609375 
+                                    	C317.551025,146.868866 316.005859,147.853806 314.235413,149.014618 
+                                    	C299.994110,139.056549 286.046448,129.127121 272.255493,118.984695 
+                                    	C269.041260,116.620834 267.174622,117.171127 264.475403,119.902260 
+                                    	C243.990585,140.629135 223.327042,161.179382 202.715851,181.781296 
+                                    	C194.573441,189.920059 181.059357,192.399216 169.957275,187.409607 
+                                    	C158.698334,182.349518 152.509598,173.736450 151.928741,161.086639 
+                                    	C151.466064,151.010468 155.107544,143.160721 162.241898,136.117996 
+                                    	C189.261856,109.445084 216.253647,82.733543 242.717728,55.513157 
+                                    	C251.908524,46.059700 271.148193,44.414673 281.571198,51.765430 
+                                    	C311.659271,72.984848 342.043579,93.784286 372.314850,114.743828 
+                                    	C373.109131,115.293762 373.941650,115.788460 374.800720,116.649002 
+                                    z" />
+                        <path fill="#3389FF" opacity="1.000000" stroke="none" d="
+                                    M463.584167,32.243523 
+                                    	C471.544647,39.370720 478.264984,46.914383 480.721954,57.381435 
+                                    	C484.094604,71.749496 482.218445,85.309975 473.209930,97.089302 
+                                    	C463.974213,109.165665 451.230774,115.391609 435.968323,114.904167 
+                                    	C412.878967,114.166779 395.861420,99.082642 392.307648,77.472389 
+                                    	C388.240540,52.740387 402.269928,31.362154 426.204956,25.427896 
+                                    	C439.431671,22.148565 451.824768,24.756756 463.584167,32.243523 
+                                    z" />
+                        <path fill="#19CFFC" opacity="1.000000" stroke="none" d="
+                                    M54.022659,189.000000 
+                                    	C76.674271,189.000000 98.830200,188.993378 120.986130,189.002945 
+                                    	C131.274368,189.007385 137.008392,194.663330 137.000000,204.755981 
+                                    	C136.992035,214.336777 131.060043,219.993591 120.973923,219.997147 
+                                    	C96.319206,220.005844 71.664490,220.006241 47.009769,219.996994 
+                                    	C36.723019,219.993134 30.991488,214.336014 31.000004,204.239929 
+                                    	C31.008083,194.659515 36.939445,189.019791 47.030163,189.000610 
+                                    	C49.195759,188.996490 51.361374,189.000000 54.022659,189.000000 
+                                    z" />
+                        <path fill="#19CFFC" opacity="1.000000" stroke="none" d="
+                                    M136.866669,89.230896 
+                                    	C133.565155,97.263092 127.778496,100.162453 119.599266,100.083084 
+                                    	C95.480469,99.849091 71.357948,100.003296 47.236885,99.997849 
+                                    	C36.907440,99.995514 30.999949,94.349220 30.999788,84.504288 
+                                    	C30.999628,74.655998 36.906010,69.004631 47.228310,69.002174 
+                                    	C70.683968,68.996605 94.139618,69.000542 117.595276,69.000488 
+                                    	C132.688126,69.000450 137.147766,73.565369 136.866669,89.230896 
+                                    z" />
+                        <path fill="#2864F0" opacity="1.000000" stroke="none" d="
+                                    M216.716156,246.975433 
+                                    	C216.776749,247.171570 216.582993,247.468323 216.140564,247.873337 
+                                    	C216.081863,247.679733 216.271820,247.377884 216.716156,246.975433 
+                                    z" />
+                    </svg><span class="fw-bolder text-primary">Trial Run
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
 
-                <div class="row justify-content-center mt-3">
-                    <div class="col-md-4">
-                        <input type="text" id="inputCapture" placeholder="Click here to start Capture" id="input-name"
-                            class="mb-3 mt-2" class="form-control" style="width: 100%;">
-
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-4">
-                        <label class="mt-3"><strong>Events:&nbsp;</strong></label><label id="listEvent"
-                            class="mt-3"></label>
-                    </div>
-
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-4">
-                        <label><strong>Keystroke:&nbsp; </strong></label><label id="keyStroke"
-                            style="max-width: 100%; word-wrap: break-word"></label>
-                    </div>
-                </div>
-                <div class="row justify-content-center mt-3">
-                    <div class="col-md-1 justify-content-left"><button type="button" onclick="clearAll()"
-                            class="btn btn-secondary">Clear
-                            All</button></div>
+                    </ul>
                 </div>
             </div>
+        </nav>
+        <!-- Header-->
+        <header class="py-5">
+            <div class="container px-5 pb-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-xxl-6">
+                        <!-- Header text content-->
+                        <div class="text-center text-xxl-start">
+                            <h1 class="display-4 fw-bolder mb-5"><span class="text-gradient d-inline">Awesome escapades
+                                    kick off with a trial run!</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="projects" class="py-5 bg-light">
+            <div class="container px-5 mb-5">
+                <div class="text-center mb-5">
+                    <h1 class="display-3 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                        <!-- Project Card 1-->
+
+                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                            <a href="barcode.html">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5 w95">
+                                            <h2 class="fw-bolder">Bardcode Scanner</h2>
+                                            <p>Bar code scanner Simulator, to capture events and data from a barcode
+                                                reader.
+                                            </p>
+                                        </div>
+                                        <div class="arrow-container">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Project Card 2-->
+                        <div class="card overflow-hidden shadow rounded-4 border-0">
+                            <a href="webapi.html">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5 w95">
+                                            <h2 class="fw-bolder">Web Serial API</h2>
+                                            <p>Send instructions to a USB Device via the Web Serial API, using
+                                                Javascript.
+                                            </p>
+                                        </div>
+                                        <div class="arrow-container">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section-->
+        <section class="bg-light py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xxl-5">
+                        <div class="text-center my-5">
+                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Trial Run</span>
+                            </h2>
+                            <p class="lead fw-light mb-4">A space for experimentation.</p>
+                            <p class="lead fw-light mb-2"><span class="fw-bolder">
+                                    Built using: </span>Bootstrap 5 and Vanila Javascript</p>
+
+
+                            <!-- <div class="d-flex justify-content-center fs-2 gap-4">
+                                <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
+                                <a class="text-gradient" href="#!"><i class="bi bi-linkedin"></i></a>
+                                <a class="text-gradient" href="#!"><i class="bi bi-github"></i></a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="fixed-bottom">
-        <p class="text-center">Copywrong 👽 &copy; 2023</p>
+    <!-- Footer-->
+    <footer class="bg-gradient-primary-to-secondary py-2 mt-auto">
+        <div class="container px-5 text-center">
+            <span class="small">Updated: 2023</span>
+
+        </div>
     </footer>
-    <script>
-        var inputBox = document.getElementById("inputCapture");
-        var listEvent = document.getElementById("listEvent");
-        var keyStroke = document.getElementById("keyStroke");
-        document.addEventListener("DOMContentLoaded", startCapture());
-        function startCapture() {
-            inputBox.addEventListener("keydown", function (event) {
-                listEvent.textContent = event.type;
-                if (/^[a-zA-Z0-9]$/.test(event.key)) {
-                    keyStroke.textContent += event.key;
-                }
-            });
-        }
-        function clearAll() {
-            listEvent.textContent = "";
-            keyStroke.textContent = "";
-            inputBox.value = "";
-        }
-    </script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
